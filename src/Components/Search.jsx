@@ -1,20 +1,21 @@
 import React from "react";
-
-const handleFormSubmit = (term) => {
-  console.log(term);
-};
+import { useState } from "react";
 
 function Search({ search }) {
-  const handleSubmit = () => {
-    search("can");
+  const [valueInput, setValue] = useState("");
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    search(valueInput);
+  };
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
   };
   return (
-    <div className="App">
+    <div className="SearchDiv">
       <form onSubmit={handleFormSubmit}>
-        <div className="d-flex flex-direction-column">
-          <label>Ne arıyorsunuz burada?</label>
-          <input type="text" name="searchValue" />
-        </div>
+        <label>Ne arıyorsunuz?</label>
+        <input type="text" value={valueInput} onChange={handleChange} />
       </form>
     </div>
   );

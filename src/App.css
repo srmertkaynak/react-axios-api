@@ -1,10 +1,11 @@
-.d-flex{
-    display: flex;
-}
-.flex-direction-column{
-    flex-direction: column;
-}
 .App{
+    margin: 10px;
+}
+.SearchDiv{
     border: 1px solid lightgray;
     padding: 10px;
+}
+.SearchDiv form{
+    display: flex;
+    flex-direction: column;
 }
