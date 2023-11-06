@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageItem = ({ image }) => {
   console.log(image);
-  return <div>Image Items</div>;
+  return <div>ImageItems</div>;
 };
 
 export default ImageItem;
